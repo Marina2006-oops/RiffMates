@@ -5,3 +5,13 @@ from django.http  import HttpResponse
 def credits(request):
     content = "Nicky\nMarina"
     return HttpResponse(content, content_type="text/plain")
+
+def news(request):
+    data= {
+        'news': [
+        "RiffMates now has a news page",
+        "RiffMates has it's first web page"
+        ]
+    }
+    return render (request, "news.html", data)
+
