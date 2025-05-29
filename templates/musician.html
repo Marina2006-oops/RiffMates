@@ -1,11 +1,12 @@
-{%extends "base.html"%}
+{% extends "base.html" %}
 
-{%block title %)
-    {{ block super }: Musician Dateil
-{% endblock  title %}
+{% block title %}
+    {{ block.super }}: Musician Dateil
+{% endblock title %}
 
-{% block content%}
+{% block body %}
+<h1>Hello</h1>
     <h1>{{ musician.first_name }} {{ musician.last_name }}</h1>
-    <p> Was born {{ musician.birt }}</p>
-    {% endblock% content %}
+    <p> Was born {{ musician.birth }}</p>
+{% endblock body %}
 
